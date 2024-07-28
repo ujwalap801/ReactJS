@@ -50,3 +50,33 @@ Declarative Code in React
 React code is written in a declarative way. React adopts a declarative approach, which means developers describe how the user interface should look based on its current state, and React takes care of updating the DOM (Document Object Model) accordingly
 
 
+# React Components
+
+## Reusable and Composable UI
+
+React components are reusable and can be composed to build complex UIs.
+
+## Introducing JSX
+
+JSX, which stands for JavaScript XML, is a syntax extension for JavaScript often used with React.js. It allows you to write HTML code within JavaScript code, making it easier to create and visualize UI components.
+
+### Key Features of JSX:
+- Combines JavaScript and HTML
+- Enhances readability and maintainability of code
+
+Example:
+```jsx
+const element = <h1>Hello,</h1>;
+
+Rendering Components with JSX
+In React, we define UI components using JavaScript functions or classes that return JSX elements. These components can be composed and nested, creating a tree-like structure.
+
+function App() {
+  return (
+    <div> 
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
+}
