@@ -40,3 +40,33 @@ All reactjs, angular follows component based Architectre
 Components:They let u split the UI into independent, reusable pieces
 Every component must return React Element
 
+
+
+# What are React Hooks?
+React hooks are functions introduced in React 16.8 that allow developers to use state and other React features in functional components without needing to write class components.
+ The most commonly used hooks are useState for managing state, and useEffect for handling side effects like fetching data or updating the DOM. Hooks make React code cleaner and easier to manage by enabling the reuse of logic between components and eliminating the need for lifecycle methods in class components.
+
+# For example, useState lets me declare a state variable in a functional component, and useEffect is useful for performing side effects, such as fetching data when the component loads or when certain values change
+
+
+# useState: "With useState, I can declare a state variable and update its value using the setter function. It's perfect for managing things like form inputs or counters."
+
+# useEffect: "The useEffect hook acts as a replacement for lifecycle methods like componentDidMount and componentDidUpdate. It allows me to run side effects, like fetching data, and can be configured to run only when certain dependencies change."
+
+
+# import React, { useState, useEffect } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [count]); // Runs when 'count' changes
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
